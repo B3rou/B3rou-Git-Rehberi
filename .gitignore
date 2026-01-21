@@ -1,0 +1,16 @@
+# Aslında bu proje için .gitignore çok gerekli olmadığını düşünebilirsiniz. Lakin her ihtimale karşı bir .gitignore koymak
+# Gelecekte yapacağınız veya yapabileceğiniz yanlış herhangi bir yüklemeyi reddeder ve işin en ustadına bile dakikalar kazandırır.
+# Ayrıca kabaca dosyanın yapısını öğrenebileceğiniz hoş bir örnek <3
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Project Specific
+*.log

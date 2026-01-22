@@ -1,6 +1,6 @@
-# Aslında bu proje için .gitignore çok gerekli olmadığını düşünebilirsiniz. Lakin her ihtimale karşı bir .gitignore koymak
-# Gelecekte yapacağınız veya yapabileceğiniz yanlış herhangi bir yüklemeyi reddeder ve işin en ustadına bile dakikalar kazandırır.
-# Ayrıca kabaca dosyanın yapısını öğrenebileceğiniz hoş bir örnek <3
+# Aslında bu proje için .gitignore çok gerekli olmadığını düşünebilirsin. Lakin her ihtimale karşı bir .gitignore koymak,
+# gelecekte yapabileceğin yanlış bir yüklemeyi reddecektir ve işin en ustasına bile en azından dakikalar kazandıracaktır.
+# Ayrıca bu projeye bir .gitignore koymak, senin için de iyi bir örnek olacaktır. Kabaca dosyanın yapısını inceleyebilirsin. <3
 
 # OS Files
 .DS_Store

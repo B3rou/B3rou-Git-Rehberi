@@ -49,13 +49,20 @@ Bu repo, statik bir ders notu değildir. Burası interaktif bir **Laboratuvar**.
 Terminali açıyoruz, alet çantamızı kuruyoruz ve ilk izimizi bırakıyoruz.
 * **[1.0 - Kurulum ve Konfigürasyon](./docs/1-genesis/1.0-kurulum-ve-ayarlar.md)**
     * *Windows, MacOS ve Linux Kurulumu ve Farkları*
-    * *Author Bilgisi(`user.name`, `user.email`)*
+    * *Author Bilgisi (`user.name`, `user.email`)*
 * **[1.1 - Git'in Felsefesi](./docs/1-genesis/1.1-git-teorisi.md)**
     * *Snapshot vs Delta (Git neden farklı?)*
+    * *Git'in Düşünce Yapısı*
     * *The Three States (Çalışma, Sahne, Depo)*
 * **[1.2 - İlk Temas](./docs/1-genesis/1.2-ilk-commit.md)**
     * *`git init`: Evreni Yaratmak*
     * *`git add` & `git commit`: Tarihi Mühürlemek*
+* **[1.3 - .gitignore](./docs/1-genesis/1.3-gitignore.md)**
+    * *.gitignore Dosyası ile Gereksizleri Görmezden Gelmek*
+    * *`git rm --cached`: Takibi Silmek*
+* **[1.4 - Yetenek Ağacım: Bölüm Özeti](./docs/1-genesis/1.4-bolum-ozeti.md)**
+    * *Bu Bölümde Neler Öğrendik?*
+    * *Hızlı bir Bakış: Kavramlar Sözlüğü*
 
 ### Bölüm 2: Multiverse (Branching)
 Tek bir çizgide gitmek zorunda değilsin. Paralel evrenler yarat.
@@ -111,8 +118,8 @@ Terminalini aç, kahveni koy. İlk ders için aşağıdaki bağlantıya tıkla. 
 
 | Bölüm | Konu | Durum |
 | :--- | :--- | :---: |
-| **01** | [Genesis](./docs/1-genesis/) | 🟡 Yapım Aşamasında |
-| **02** | Multiverse | 🔴 Beklemede |
+| **01** | [Genesis](./docs/1-genesis/) | 🟢 Tamamlandı |
+| **02** | [Multiverse](./docs/2-multiverse/) | 🟡 Yapım Aşamasında |
 | **03** | Time Travel | 🔴 Beklemede |
 | **04** | Remote | 🔴 Beklemede |
 | **05** | Detective | 🔴 Beklemede |
@@ -126,3 +133,9 @@ Terminalini aç, kahveni koy. İlk ders için aşağıdaki bağlantıya tıkla. 
 
 2. **[Gemini AI](https://gemini.google.com/):**
    > *Projenin monotonluğunu gidermek, eksik tespitinde ve doldurmada yardımcı olmak, Markdown estetiğini güçlendirmek, dil bilgisi hatalarını ayıklamak ve "Interactive Learning" konseptinde mentorluk sağlamak için kullanılmıştır.*
+
+3. **[Git Resmi Dokümantasyonu](https://git-scm.com/doc):**
+   > *Her komutun derinliklerine inmek ve doğru bilgiyi sağlamak için başvurulan birincil kaynak.*
+
+4. **[Wikipedia](https://www.wikipedia.org/):**
+   > *Kavramsal açıklamalar, tarihsel perspektif ve meraklısına bilgiler sunan birincil kaynak olduğu için.*

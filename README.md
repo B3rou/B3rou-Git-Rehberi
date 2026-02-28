@@ -30,9 +30,13 @@ Bu rehber, **ezberci bir sözlük** değildir. Rehberin Türkçe olmasını bir 
 
 Burada sadece komutları değil; bir takımın parçası olmayı, repoyu temiz tutmayı ve tarihi (history) korkusuzca manipüle etmeyi öğreneceksin.
 
+> [!IMPORTANT]
+> **Komutları Ezberleme, Zihniyeti Kavra!** <br>
+> Bu rehberde `rebase`, `cherry-pick`, `orphan` gibi ağır ve tehlikeli komutlar göreceksin. Senden bunları ezberlemeni **kesinlikle beklemiyorum.** İnterneti açıp bir komutun parametresine bakmak 5 saniyelik bir iştir. Asıl mühendislik yeteneği; internette neyi arayacağını bilmek, Git'in klasörleri nasıl yönettiğini zihninde canlandırabilmek ve o mental modeli kurabilmektir. O yüzden, komutları ezberlemek yerine, **Git'in nasıl çalıştığını anlamaya odaklanmanı** öneriyorum.
+
 ---
 
-## Nasıl Kullanılır? (Simülasyon Mantığı)
+## Nasıl Kullanılır?
 Bu repo, statik bir ders notu değildir. Burası interaktif bir **Laboratuvar**.
 
 1.  **Lobi (Main Branch):** Şu an bulunduğun yer. Burada teoriyi okuyacak, kahveni yudumlayacaksın.
@@ -65,46 +69,52 @@ Terminali açıyoruz, alet çantamızı kuruyoruz ve ilk izimizi bırakıyoruz.
     * *Hızlı bir Bakış: Kavramlar Sözlüğü*
 
 ### Bölüm 2: Multiverse (Branching)
-Tek bir çizgide gitmek zorunda değilsin. Paralel evrenler yarat.
+Tek bir çizgide gitmek zorunda değilsin. Projeni izole alanlara ayırıp güvenle çalışmayı öğren.
 * **[2.0 - Branch Anatomisi](./docs/2-multiverse/2.0-branch-mantigi.md)**
     * *Pointer nedir? HEAD nereye bakıyor?*
     * *Branch oluşturma ve geçiş yapma*
 * **[2.1 - Birleştirme Sanatı (Merge)](./docs/2-multiverse/2.1-merge-ve-conflict.md)**
     * *Fast-Forward vs 3-Way Merge*
-    * *Conflict (Çakışma) Yönetimi ve Temizliği*
-* **[2.2 - Gelişmiş Branch Teknikleri](./docs/2-multiverse/2.2-gelismis-branching.md)**
-    * *`stash`: Dağınık masayı toplamadan misafir ağırlamak.*
-    * *`orphan`: Geçmişi olmayan, köksüz dallar yaratmak.*
-    * *Branch temizliği: Silme ve düzenleme.*
+    * *Conflict (Çakışma) Yönetimi ve Çözümü*
+* **[2.2 - Gelişmiş Branch Yönetimi](./docs/2-multiverse/2.2-gelismis-branching.md)**
+    * *`stash`: Yarım kalan işleri güvenle zulalamak.*
+    * *`rebase`: Tarihçeyi ütüleyip düz bir çizgiye çevirmek.*
+    * *`cherry-pick`: Başka bir branch'ten nokta atışı commit almak.*
+* **[2.3 - Alternatif Gerçeklikler: Orphan Branch ve Temizlik](./docs/2-multiverse/2.3-orphan-dallar.md)**
+    * *`orphan`: Geçmişi olmayan, bağımsız branch'ler yaratmak.*
+    * *`clean` ve `branch -d`: Çalışma alanının ve reponun bahar temizliği.*
+* **[2.4 - Yetenek Ağacım: Bölüm Özeti](./docs/2-multiverse/2.4-bolum-ozeti.md)**
+    * *Bu Bölümde Neler Öğrendik?*
+    * *Hızlı Bir Bakış: Kavramlar Sözlüğü*
 
-### Bölüm 3: Time Travel (Zaman Manipülasyonu)
+### Bölüm 3: Bulutlara Çıkış (Remote & İşbirliği)
+Kodun artık sadece senin bilgisayarında değil. Takım arkadaşlarınla aynı evrende çarpışmadan kod yazmayı öğren.
+* **[3.0 - GitHub ile Dans](./docs/3-remote/3.0-remote-temelleri.md)**
+    * *SSH Key Kurulumu ve Güvenlik*
+    * *Remote, Fetch, Pull, Push: Sunucuyla konuşmak*
+* **[3.1 - Ekip Kültürü ve PR](./docs/3-remote/3.1-collaboration.md)**
+    * *Pull Request (PR) Açma ve Code Review*
+    * *Forking Workflow (Açık kaynak projelere katkı sağlamak)*
+
+### Bölüm 4: Time Travel (Zaman Manipülasyonu)
 Hata yaptın. Sorun değil, geçmişi değiştirebiliriz.
-* **[3.0 - Geri Alma Komutları](./docs/3-time-travel/3.0-geri-almak.md)**
-    * *`checkout` (Gözlemci Modu)*
-    * *`revert` (Güvenli Geri Alma)*
-    * *`reset` (Yıkıcı Geri Alma - Soft, Mixed, Hard)*
-* **[3.1 - Tarihi Yeniden Yazmak](./docs/3-time-travel/3.1-gelismis-history.md)**
-    * *`amend`: Son sözü değiştirmek*
-    * *`rebase`: Tarihi düzleştirmek*
-    * *`cherry-pick`: Newton'u değil, yalnızca ihtiyacın olan elmayı almak.*
-* **[3.2 - The Safety Net (Güvenlik Ağı)](./docs/3-time-travel/3.2-reflog.md)**
-    * *`reflog`: Silinen commitleri mezardan çıkarmak (Git'in kara kutusu).*
-
-### Bölüm 4: Remote (Uzak Depolar)
-Kodun artık sadece senin bilgisayarında değil.
-* **[4.0 - GitHub ile Dans](./docs/4-remote/4.0-remote-temelleri.md)**
-    * *SSH Key Kurulumu*
-    * *Remote, Fetch, Pull, Push ve Tagging*
-* **[4.1 - Ekip Kültürü](./docs/4-remote/4.1-collaboration.md)**
-    * *Pull Request (PR) Açma ve Review*
-    * *Forking Workflow*
-    * *`.gitignore` ile Repo Hijyeni*
+* **[4.0 - Geri Alma Sanatı](./docs/4-time-travel/4.0-geri-almak.md)**
+    * *`checkout` / `restore` (Eski dosyalara göz atmak ve kurtarmak)*
+    * *`revert` (Tarihi bozmadan güvenli geri alma)*
+* **[4.1 - Yıkıcı Zaman Yolculuğu](./docs/4-time-travel/4.1-reset-mantigi.md)**
+    * *`reset` komutunun 3 atlısı: Soft, Mixed, Hard*
+    * *`amend`: Son commiti (sözü) gizlice değiştirmek*
+* **[4.2 - The Safety Net (Güvenlik Ağı)](./docs/4-time-travel/4.2-reflog.md)**
+    * *`reflog`: Silinen commitleri ve kayıp evrenleri mezardan çıkarmak (Git'in kara kutusu).*
 
 ### Bölüm 5: The Detective (Advanced)
 Bir mühendis gibi hata ayıklamak.
 * **[5.0 - Suçluyu Bulmak](./docs/5-detective/5.0-debugging.md)**
     * *`blame`: "Bu satırı kim yazdı?"*
     * *`bisect`: 1000 commit arasında hatayı binary search ile bulmak.*
+
+### Bonus: Everyday Git (Hap Bilgiler)
+* *Sadece en sık kullanılan komutlar ve Cheat Sheet (15 Dakikada Git)*
 
 ---
 
@@ -119,10 +129,11 @@ Terminalini aç, kahveni koy. İlk ders için aşağıdaki bağlantıya tıkla. 
 | Bölüm | Konu | Durum |
 | :--- | :--- | :---: |
 | **01** | [Genesis](./docs/1-genesis/) | 🟢 Tamamlandı |
-| **02** | [Multiverse](./docs/2-multiverse/) | 🟡 Yapım Aşamasında |
-| **03** | Time Travel | 🔴 Beklemede |
-| **04** | Remote | 🔴 Beklemede |
-| **05** | Detective | 🔴 Beklemede |
+| **02** | [Multiverse](./docs/2-multiverse/) | 🟢 Tamamlandı |
+| **03** | [Remote & İşbirliği](./docs/3-remote/) | 🟡 Yapım Aşamasında |
+| **04** | [Time Travel](./docs/4-time-travel/) | 🔴 Beklemede |
+| **05** | [Detective](./docs/5-detective/) | 🔴 Beklemede |
+| **Bonus** | [Everyday Git](./docs/6-everyday-git/) | 🔴 Beklemede |
 
 ---
 
